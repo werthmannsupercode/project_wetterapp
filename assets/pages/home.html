@@ -6,50 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <title>Wetterapp</title>
 </head>
 
-<body>
+<body class="home">
     <header>
-        <img src="../img/logobutton.png" alt="Logobutton">
-        <input type="text" name="Ort" id="inputPlace" placeholder="Ortsname">
+        <img src="../img/Logobeige.png" alt="Logobutton">
+        <!-- input search adds x for delete automatisch -->
+        <input type="search" name="Ort" id="inputPlace" placeholder="Ort eingeben">
     </header>
     <main>
         <section class="wetterAktuell">
             <h2>Aktuelles Wetter</h2>
             <div>
-                <!-- Icon -->
+                <img src="../img/sun-gf16cbf9ab_640.png" alt="sonniges Wetter">
                 <div>
-                    <p id="gradAktuell"></p>
-                    <p id="regenAktuell"></p>
+                    <p id="gradAktuell">22°C</p>
+                    <p id="regenAktuell">18°C</p>
                 </div>
             </div>
         </section>
         <section class="wetterHeute">
             <h2>Heute</h2>
             <div class="plus3h">
-                <!-- Icon -->
-                <p id="gradPlus3h"></p>
-                <p id="regenPlus3h"></p>
-                <p id="zeitPlus3h"></p>
+                <img src="../img/rain-g4b6dc0ec8_640.png" alt="Regenwetter">
+                <p id="gradPlus3h">22°C</p>
+                <p id="regenPlus3h">18°C</p>
+                <p id="zeitPlus3h">21:00</p>
             </div>
             <div class="plus6h">
-                <!-- Icon -->
-                <p id="gradPlus6h"></p>
-                <p id="regenPlus6h"></p>
-                <p id="zeitPlus6h"></p>
+                <img src="../img/light-rain-1265212_640.png" alt="leichter Regen">
+                <p id="gradPlus3h">22°C</p>
+                <p id="regenPlus3h">18°C</p>
+                <p id="zeitPlus3h">21:00</p>
             </div>
             <div class="plus9h">
-                <!-- Icon -->
-                <p id="gradPlus9h"></p>
-                <p id="regenPlus9h"></p>
-                <p id="zeitPlus9h"></p>
+                <img src="../img/cloudy-1265205_640.png" alt="wolkig">
+                <p id="gradPlus3h">22°C</p>
+                <p id="regenPlus3h">18°C</p>
+                <p id="zeitPlus3h">21:00</p>
             </div>
             <div class="plus12h">
-                <!-- Icon -->
-                <p id="gradPlus12h"></p>
-                <p id="regenPlus12h"></p>
-                <p id="zeitPlus12h"></p>
+                <img src="../img/cloudy-1265205_640.png" alt="wolkig">
+                <p id="gradPlus3h">22°C</p>
+                <p id="regenPlus3h">18°C</p>
+                <p id="zeitPlus3h">21:00</p>
             </div>
         </section>
         <section class="next5Tage">
@@ -105,12 +108,6 @@
     <footer>
         Die Wetterfrösche 🐸
     </footer>
-
-
-
-
-
-
     <script src="../js/main.js"></script>
 </body>
 
