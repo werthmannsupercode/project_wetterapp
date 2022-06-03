@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Wetterapp</title>
+</head>
+
+<body>
+    <header>
+        <!-- LOGO -->
+        <input type="text" name="Ort" id="inputPlace" placeholder="PLZ/ Ortsname">
+    </header>
+    <main>
+        <section class="wetterAktuell">
+            <h2>Aktuelles Wetter</h2>
+            <div>
+                <!-- Icon -->
+                <div>
+                    <p id="gradAktuell"></p>
+                    <p id="regenAktuell"></p>
+                </div>
+            </div>
+        </section>
+        <section class="wetterHeute">
+            <h2>Heute</h2>
+            <div class="plus3h">
+                <!-- Icon -->
+                <p id="gradPlus3h"></p>
+                <p id="regenPlus3h"></p>
+                <p id="zeitPlus3h"></p>
+            </div>
+            <div class="plus6h">
+                <!-- Icon -->
+                <p id="gradPlus6h"></p>
+                <p id="regenPlus6h"></p>
+                <p id="zeitPlus6h"></p>
+            </div>
+            <div class="plus9h">
+                <!-- Icon -->
+                <p id="gradPlus9h"></p>
+                <p id="regenPlus9h"></p>
+                <p id="zeitPlus9h"></p>
+            </div>
+            <div class="plus12h">
+                <!-- Icon -->
+                <p id="gradPlus12h"></p>
+                <p id="regenPlus12h"></p>
+                <p id="zeitPlus12h"></p>
+            </div>
+        </section>
+        <section class="next5Tage">
+            <h2>Nächste 5 Tage</h2>
+            <a class="plus1Day" href="assets/pages/nextday.html">
+                <div>
+                    <p id="tagPlus1Day"></p>
+                    <p id="datumPlus1Day"></p>
+                </div>
+                <!-- Icon -->
+                <p id="gradGesamtPlus1Day"></p>
+                <p id="regenGesamtPlus1Day"></p>
+            </a>
+            <a class="plus1Day" href="assets/pages/nextday.html">
+                <div>
+                    <p id="tagPlus1Day"></p>
+                    <p id="datumPlus1Day"></p>
+                </div>
+                <!-- Icon -->
+                <p id="gradGesamtPlus1Day"></p>
+                <p id="regenGesamtPlus1Day"></p>
+            </a>
+            <a class="plus2Day" href="assets/pages/nextday.html">
+                <div>
+                    <p id="tagPlus2Day"></p>
+                    <p id="datumPlus2Day"></p>
+                </div>
+                <!-- Icon -->
+                <p id="gradGesamtPlus2Day"></p>
+                <p id="regenGesamtPlus2Day"></p>
+            </a>
+            <a class="plus3Day" href="assets/pages/nextday.html">
+                <div>
+                    <p id="tagPlus3Day"></p>
+                    <p id="datumPlus3Day"></p>
+                </div>
+                <!-- Icon -->
+                <p id="gradGesamtPlus3Day"></p>
+                <p id="regenGesamtPlus3Day"></p>
+            </a>
+            <a class="plus4Day" href="assets/pages/nextday.html">
+                <div>
+                    <p id="tagPlus4Day"></p>
+                    <p id="datumPlus4Day"></p>
+                </div>
+                <!-- Icon -->
+                <p id="gradGesamtPlus4Day"></p>
+                <p id="regenGesamtPlus4Day"></p>
+            </a>
+        </section>
+        <section class="karte"></section>
+    </main>
+    <footer>
+        Die Wetterfrösche 🐸
+    </footer>
+
+
+
+
+
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
