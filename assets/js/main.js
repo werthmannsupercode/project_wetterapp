@@ -1,4 +1,5 @@
 "use strict";
+// AKTUELLES WETTER
 const key = "05e51114b5e93010f054078695bca843";
 const locationname = document.querySelector("#location");
 const temp = document.querySelector("#temp");
@@ -9,7 +10,7 @@ const iconIdact = document.querySelector("#iconIdact");
 const humidity = document.querySelector("#humidity");
 const pressure = document.querySelector("#pressure");
 
-// VORHERSAGE
+// AKTUELLE VORHERSAGE
 const gradPlus3h = document.querySelector("#gradPlus3h");
 const zeitPlus3h = document.querySelector("#zeitPlus3h");
 const wetterPlus3h = document.querySelector("#wetterPlus3h");
@@ -58,10 +59,8 @@ const iconPlus5Day = document.querySelector("#iconPlus5Day");
 
 let getWeather = () => {
   let location = document.querySelector("#inputPlace").value;
-  let location_name = document.querySelector("#inputPlace").value;
   let lat;
   let lon;
-  let arr = [];
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${key}&units=metric&lang=DE`
   )
