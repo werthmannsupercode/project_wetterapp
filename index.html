@@ -9,9 +9,96 @@
   </head>
 
   <body>
-    <section>
-      <h1>test</h1>
-    </section>
+    <header>
+      <!-- LOGO -->
+      <input
+        type="text"
+        name="Ort"
+        id="inputPlace"
+        placeholder="PLZ/ Ortsname"
+        onchange="getWeather()
+        required"
+      />
+    </header>
+    <main>
+      <section class="wetterAktuell">
+        <h2>Aktuelles Wetter</h2>
+        <div>
+          <!-- Icon -->
+          <div>
+            <h2 id="location"></h2>
+            <h3 id="temp"></h3>
+            <p id="description"></p>
+            <p id="feels_like"></p>
+            <p id="temp_min"></p>
+            <p id="temp_max"></p>
+          </div>
+        </div>
+      </section>
+      <section class="wetterHeute">
+        <h2>Heute</h2>
+        <div class="plus3h">
+          <!-- Icon -->
+          <p id="gradPlus3h"></p>
+          <p id="zeitPlus3h"></p>
+        </div>
+        <div class="plus6h">
+          <!-- Icon -->
+          <p id="gradPlus6h"></p>
+          <p id="zeitPlus6h"></p>
+        </div>
+        <div class="plus9h">
+          <!-- Icon -->
+          <p id="gradPlus9h"></p>
+          <p id="zeitPlus9h"></p>
+        </div>
+        <div class="plus12h">
+          <!-- Icon -->
+          <p id="gradPlus12h"></p>
+          <p id="zeitPlus12h"></p>
+        </div>
+      </section>
+      <section class="next5Tage">
+        <h2>Nächste 5 Tage</h2>
+        <a class="plus1Day" href="assets/pages/nextday.html">
+          <div>
+            <p id="datumPlus1Day"></p>
+            <!-- Icon -->
+            <p id="tempPlus1Day"></p>
+          </div>
+        </a>
+        <a class="plus1Day" href="assets/pages/nextday.html">
+          <div>
+            <p id="datumPlus2Day"></p>
+            <!-- Icon -->
+            <p id="tempPlus2Day"></p>
+          </div>
+        </a>
+        <a class="plus2Day" href="assets/pages/nextday.html">
+          <div>
+            <p id="datumPlus3Day"></p>
+            <!-- Icon -->
+            <p id="tempPlus3Day"></p>
+          </div>
+        </a>
+        <a class="plus3Day" href="assets/pages/nextday.html">
+          <div>
+            <p id="datumPlus4Day"></p>
+            <!-- Icon -->
+            <p id="tempPlus4Day"></p>
+          </div>
+        </a>
+        <a class="plus4Day" href="assets/pages/nextday.html">
+          <div>
+            <p id="datumPlus5Day"></p>
+            <!-- Icon -->
+            <p id="tempPlus5Day"></p>
+          </div>
+        </a>
+      </section>
+      <section class="karte"></section>
+    </main>
+    <footer>Die Wetterfrösche 🐸</footer>
 
     <script src="assets/js/main.js"></script>
   </body>
