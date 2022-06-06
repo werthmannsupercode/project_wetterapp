@@ -26,9 +26,14 @@
 </head>
 
 <body>
+
+
+
+    <!-- PASCAL HTML ÄNDERUNG -->
     <header>
         <!-- LOGO -->
-        <input type="text" name="Ort" id="inputPlace" placeholder="PLZ/ Ortsname" onchange="getWeather()">
+        <input type="text" name="Ort" id="inputPlace" placeholder="PLZ/ Ortsname" onchange="getWeather()
+      required" />
     </header>
     <main>
         <section class="wetterAktuell">
@@ -36,8 +41,12 @@
             <div>
                 <!-- Icon -->
                 <div>
-                    <p id="gradAktuell"></p>
-                    <p id="regenAktuell"></p>
+                    <h2 id="location"></h2>
+                    <h3 id="temp"></h3>
+                    <p id="description"></p>
+                    <p id="feels_like"></p>
+                    <p id="temp_min"></p>
+                    <p id="temp_max"></p>
                 </div>
             </div>
         </section>
@@ -46,25 +55,21 @@
             <div class="plus3h">
                 <!-- Icon -->
                 <p id="gradPlus3h"></p>
-                <p id="regenPlus3h"></p>
                 <p id="zeitPlus3h"></p>
             </div>
             <div class="plus6h">
                 <!-- Icon -->
                 <p id="gradPlus6h"></p>
-                <p id="regenPlus6h"></p>
                 <p id="zeitPlus6h"></p>
             </div>
             <div class="plus9h">
                 <!-- Icon -->
                 <p id="gradPlus9h"></p>
-                <p id="regenPlus9h"></p>
                 <p id="zeitPlus9h"></p>
             </div>
             <div class="plus12h">
                 <!-- Icon -->
                 <p id="gradPlus12h"></p>
-                <p id="regenPlus12h"></p>
                 <p id="zeitPlus12h"></p>
             </div>
         </section>
@@ -72,57 +77,49 @@
             <h2>Nächste 5 Tage</h2>
             <a class="plus1Day" href="assets/pages/nextday.html">
                 <div>
-                    <p id="tagPlus1Day"></p>
                     <p id="datumPlus1Day"></p>
+                    <!-- Icon -->
+                    <p id="tempPlus1Day"></p>
                 </div>
-                <!-- Icon -->
-                <p id="gradGesamtPlus1Day"></p>
-                <p id="regenGesamtPlus1Day"></p>
             </a>
             <a class="plus1Day" href="assets/pages/nextday.html">
                 <div>
-                    <p id="tagPlus1Day"></p>
-                    <p id="datumPlus1Day"></p>
+                    <p id="datumPlus2Day"></p>
+                    <!-- Icon -->
+                    <p id="tempPlus2Day"></p>
                 </div>
-                <!-- Icon -->
-                <p id="gradGesamtPlus1Day"></p>
-                <p id="regenGesamtPlus1Day"></p>
             </a>
             <a class="plus2Day" href="assets/pages/nextday.html">
                 <div>
-                    <p id="tagPlus2Day"></p>
-                    <p id="datumPlus2Day"></p>
+                    <p id="datumPlus3Day"></p>
+                    <!-- Icon -->
+                    <p id="tempPlus3Day"></p>
                 </div>
-                <!-- Icon -->
-                <p id="gradGesamtPlus2Day"></p>
-                <p id="regenGesamtPlus2Day"></p>
             </a>
             <a class="plus3Day" href="assets/pages/nextday.html">
                 <div>
-                    <p id="tagPlus3Day"></p>
-                    <p id="datumPlus3Day"></p>
+                    <p id="datumPlus4Day"></p>
+                    <!-- Icon -->
+                    <p id="tempPlus4Day"></p>
                 </div>
-                <!-- Icon -->
-                <p id="gradGesamtPlus3Day"></p>
-                <p id="regenGesamtPlus3Day"></p>
             </a>
             <a class="plus4Day" href="assets/pages/nextday.html">
                 <div>
-                    <p id="tagPlus4Day"></p>
-                    <p id="datumPlus4Day"></p>
+                    <p id="datumPlus5Day"></p>
+                    <!-- Icon -->
+                    <p id="tempPlus5Day"></p>
                 </div>
-                <!-- Icon -->
-                <p id="gradGesamtPlus4Day"></p>
-                <p id="regenGesamtPlus4Day"></p>
             </a>
         </section>
         <section class="karte"></section>
     </main>
-    <footer>
-        Die Wetterfrösche 🐸
-    </footer>
+    <footer>Die Wetterfrösche 🐸</footer>
 
-    <!-- Div mit vorgefertigtem Style für die Map -->
+    <!-- PASCAL ÄNDERUNG ENDE -->
+
+
+
+    <!-- CIPI : Div mit vorgefertigtem Style für die Map -->
     <div id="map">
         <a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img
                 src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
