@@ -123,6 +123,7 @@ let getWeather = () => {
               )
                 .then((response) => response.json())
                 .then((json) => {
+
                   gradPlus3h.innerHTML = `${json.list[0].main.temp.toFixed(
                     0
                   )}°C`;
@@ -218,6 +219,122 @@ let getWeather = () => {
                   let datumschoen4 =
                     datep4tag.slice(3, 5) + "." + datep4tag.slice(0, 2) + ".";
                   datumPlus4Day.innerHTML = datumschoen4;
+                    if (json) {
+                        lat = json.lat;
+                        lon = json.lon;
+                    }
+                })
+                // LocationName to coordinates
+                .then(() => {
+                    fetch(
+                        `http://api.openweathermap.org/geo/1.0/direct?q=${location},DE&limit=1&appid=${key}&units=metric&lang=DE`
+                    )
+                        .then((response) => response.json())
+                        .then((json) => {
+                            if (json.length != 0) {
+                                lat = json[0].lat;
+                                lon = json[0].lon;
+                            }
+                        })
+                        // Weatherforecast (5days every 3hrs)
+                        .then(() => {
+                            fetch(
+                                `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=metric&lang=DE`
+                            )
+                                .then((response) => response.json())
+                                .then((json) => {
+                                    gradPlus3h.innerHTML = `${json.list[0].main.temp.toFixed(
+                                        0
+                                    )}°C`;
+                                    zeitPlus3h.innerHTML = `${json.list[0].dt_txt.slice(11, 16)}`;
+                                    wetterPlus3h.innerHTML = `${json.list[0].weather[0].description}`;
+                                    iconId3h.style.display = "block";
+                                    iconId3h.setAttribute(
+                                        `src`,
+                                        `http://openweathermap.org/img/wn/${json.list[1].weather[0].icon}@2x.png`
+                                    );
+                                    gradPlus6h.innerHTML = `${json.list[1].main.temp.toFixed(
+                                        0
+                                    )}°C`;
+                                    zeitPlus6h.innerHTML = `${json.list[1].dt_txt.slice(11, 16)}`;
+                                    wetterPlus6h.innerHTML = `${json.list[1].weather[0].description}`;
+                                    iconId6h.style.display = "block";
+                                    iconId6h.setAttribute(
+                                        `src`,
+                                        `http://openweathermap.org/img/wn/${json.list[1].weather[0].icon}@2x.png`
+                                    );
+                                    gradPlus9h.innerHTML = `${json.list[2].main.temp.toFixed(
+                                        0
+                                    )}°C`;
+                                    zeitPlus9h.innerHTML = `${json.list[2].dt_txt.slice(11, 16)}`;
+                                    wetterPlus9h.innerHTML = `${json.list[2].weather[0].description}`;
+                                    iconId9h.style.display = "block";
+                                    iconId9h.setAttribute(
+                                        `src`,
+                                        `http://openweathermap.org/img/wn/${json.list[2].weather[0].icon}@2x.png`
+                                    );
+                                    gradPlus12h.innerHTML = `${json.list[3].main.temp.toFixed(
+                                        0
+                                    )}°C`;
+                                    zeitPlus12h.innerHTML = `${json.list[3].dt_txt.slice(
+                                        11,
+                                        16
+                                    )}`;
+                                    wetterPlus12h.innerHTML = `${json.list[3].weather[0].description}`;
+                                    iconId12h.style.display = "block";
+                                    iconId12h.setAttribute(
+                                        `src`,
+                                        `http://openweathermap.org/img/wn/${json.list[3].weather[0].icon}@2x.png`
+                                    );
+                                    border1.style.borderBottom = "0.5px dashed #0081AF";
+                                    tempPlus1Day.innerHTML = `${json.list[7].main.temp.toFixed(
+                                        0
+                                    )}°C`;
+                                    wetterPlus1Day.innerHTML =
+                                        json.list[7].weather[0].description;
+                                    let datep1tag = json.list[7].dt_txt.slice(5, 10);
+                                    let datumschoen1 = datep1tag.slice(3, 5) + "." + datep1tag.slice(0, 2) + ".";
+                                    datumPlus1Day.innerHTML = datumschoen1;
+                                    iconPlus1Day.setAttribute(
+                                        `src`,
+                                        `http://openweathermap.org/img/wn/${json.list[7].weather[0].icon}@2x.png`
+                                    );
+                                    border2.style.borderBottom = "0.5px dashed #0081AF";
+                                    tempPlus2Day.innerHTML = `${json.list[15].main.temp.toFixed(
+                                        0
+                                    )}°C`;
+                                    wetterPlus2Day.innerHTML =
+                                        json.list[15].weather[0].description;
+                                    let datep2tag = json.list[15].dt_txt.slice(5, 10);
+                                    let datumschoen2 = datep2tag.slice(3, 5) + "." + datep2tag.slice(0, 2) + ".";
+                                    datumPlus2Day.innerHTML = datumschoen2;
+                                    iconPlus2Day.setAttribute(
+                                        `src`,
+                                        `http://openweathermap.org/img/wn/${json.list[15].weather[0].icon}@2x.png`
+                                    );
+                                    border3.style.borderBottom = "0.5px dashed #0081AF";
+                                    tempPlus3Day.innerHTML = `${json.list[23].main.temp.toFixed(
+                                        0
+                                    )}°C`;
+                                    wetterPlus3Day.innerHTML =
+                                        json.list[23].weather[0].description;
+                                    let datep3tag = json.list[23].dt_txt.slice(5, 10);
+                                    let datumschoen3 = datep3tag.slice(3, 5) + "." + datep3tag.slice(0, 2) + ".";
+                                    datumPlus3Day.innerHTML = datumschoen3;
+                                    iconPlus3Day.setAttribute(
+                                        `src`,
+                                        `http://openweathermap.org/img/wn/${json.list[23].weather[0].icon}@2x.png`
+                                    );
+                                    border4.style.borderBottom = "0.5px dashed #0081AF";
+                                    tempPlus4Day.innerHTML = `${json.list[31].main.temp.toFixed(
+                                        0
+                                    )}°C`;
+                                    wetterPlus4Day.innerHTML =
+                                        json.list[31].weather[0].description;
+                                    let datep4tag = json.list[31].dt_txt.slice(5, 10);
+                                    let datumschoen4 = datep4tag.slice(3, 5) + "." + datep4tag.slice(0, 2) + ".";
+                                    datumPlus4Day.innerHTML = datumschoen4;
+
 
                   iconPlus4Day.setAttribute(
                     `src`,

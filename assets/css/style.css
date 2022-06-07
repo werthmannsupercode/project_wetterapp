@@ -1,4 +1,12 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+=======
+/* ========================
+    GENERAL STYLE
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 
 /* font-family: 'Roboto', sans-serif; */
 
@@ -29,6 +37,10 @@ body {
   margin: 2vh auto;
 }
 
+/* ========================
+    HEADER
+=========================== */
+
 #inputPlace {
   border: none;
   width: 80%;
@@ -41,6 +53,10 @@ body {
   font-size: 1.6rem;
 }
 
+/* ========================
+    MAIN
+=========================== */
+
 .home {
   padding: 1vh 1vh 0 1vh;
 }
@@ -52,6 +68,7 @@ body {
   margin: 2vh 0;
 }
 
+/* Aktuelles Wetter/ Heute/ Nächste 5 Tage  */
 h2 {
   text-align: center;
   color: #00abe7;
@@ -60,17 +77,20 @@ h2 {
   padding: 2vh 0;
 }
 
+/* Datum InnerHTML */
 h3 {
   font-size: 2rem;
   font-weight: 300;
   color: #eaba6b;
 }
 
+/* Temperatur */
 h4 {
   font-size: 3rem;
   font-weight: 400;
   color: #eaba6b;
 }
+
 
 .wetterAktuell > div,
 .next5Tage > div {
@@ -78,6 +98,15 @@ h4 {
   justify-content: space-around;
   margin: 0 1vh;
   padding-bottom: 2vh;
+
+/* Aktuelles Wetter  */
+.wetterAktuell>div,
+.next5Tage>div {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 1vh;
+    padding-bottom: 2vh;
+
 }
 
 .wetterAktuell div div:nth-of-type(1),
@@ -117,6 +146,15 @@ h4 {
   padding: 0 1vh 1vh 1vh;
   gap: 10px;
 }
+
+#iconId3h,
+#iconId6h,
+#iconId9h,
+#iconId12h {
+    display: none;
+}
+
+/* Wetter Heute */
 
 .wetterHeute h2 {
   grid-column: 1/5;
@@ -159,6 +197,7 @@ h4 {
   margin: 1vh 0;
 }
 
+
 #iconId3h,
 #iconId6h,
 #iconId9h,
@@ -166,6 +205,8 @@ h4 {
   display: none;
 }
 
+
+/* Nächste 5 Tage */
 .next5Tage div div:nth-of-type(1) img {
   height: 80px;
   object-fit: contain;
@@ -180,6 +221,11 @@ h4 {
   padding-bottom: 1vh;
   color: #eaba6b;
   font-weight: 400;
+}
+
+.next5Tage>div {
+    padding-top: 2vh;
+    border-bottom: 0.5px dashed #0081AF;
 }
 
 .border1,
@@ -201,7 +247,12 @@ h4 {
   height: 50vh;
 }
 
+/* ========================
+    FOOTER
+=========================== */
+
 footer {
+
   text-align: center;
   color: #ead2ac;
   font-weight: 500;
@@ -219,3 +270,9 @@ footer {
     width: 30vw;
   }
 }
+    text-align: center;
+    color: #EAD2AC;
+    font-weight: 500;
+    padding-bottom: 2vh;
+}
+
