@@ -172,7 +172,9 @@ let getWeather = () => {
                                     )}°C`;
                                     wetterPlus1Day.innerHTML =
                                         json.list[7].weather[0].description;
-                                    datumPlus1Day.innerHTML = json.list[7].dt_txt.slice(5, 10);
+                                    let datep1tag = json.list[7].dt_txt.slice(5, 10);
+                                    let datumschoen1 = datep1tag.slice(3, 5) + "." + datep1tag.slice(0, 2) + ".";
+                                    datumPlus1Day.innerHTML = datumschoen1;
                                     iconPlus1Day.setAttribute(
                                         `src`,
                                         `http://openweathermap.org/img/wn/${json.list[7].weather[0].icon}@2x.png`
@@ -183,7 +185,9 @@ let getWeather = () => {
                                     )}°C`;
                                     wetterPlus2Day.innerHTML =
                                         json.list[15].weather[0].description;
-                                    datumPlus2Day.innerHTML = json.list[15].dt_txt.slice(5, 10);
+                                    let datep2tag = json.list[15].dt_txt.slice(5, 10);
+                                    let datumschoen2 = datep2tag.slice(3, 5) + "." + datep2tag.slice(0, 2) + ".";
+                                    datumPlus2Day.innerHTML = datumschoen2;
                                     iconPlus2Day.setAttribute(
                                         `src`,
                                         `http://openweathermap.org/img/wn/${json.list[15].weather[0].icon}@2x.png`
@@ -194,7 +198,9 @@ let getWeather = () => {
                                     )}°C`;
                                     wetterPlus3Day.innerHTML =
                                         json.list[23].weather[0].description;
-                                    datumPlus3Day.innerHTML = json.list[23].dt_txt.slice(5, 10);
+                                    let datep3tag = json.list[23].dt_txt.slice(5, 10);
+                                    let datumschoen3 = datep3tag.slice(3, 5) + "." + datep3tag.slice(0, 2) + ".";
+                                    datumPlus3Day.innerHTML = datumschoen3;
                                     iconPlus3Day.setAttribute(
                                         `src`,
                                         `http://openweathermap.org/img/wn/${json.list[23].weather[0].icon}@2x.png`
@@ -205,7 +211,10 @@ let getWeather = () => {
                                     )}°C`;
                                     wetterPlus4Day.innerHTML =
                                         json.list[31].weather[0].description;
-                                    datumPlus4Day.innerHTML = json.list[31].dt_txt.slice(5, 10);
+                                    let datep4tag = json.list[31].dt_txt.slice(5, 10);
+                                    let datumschoen4 = datep4tag.slice(3, 5) + "." + datep4tag.slice(0, 2) + ".";
+                                    datumPlus4Day.innerHTML = datumschoen4;
+
                                     iconPlus4Day.setAttribute(
                                         `src`,
                                         `http://openweathermap.org/img/wn/${json.list[31].weather[0].icon}@2x.png`
@@ -216,7 +225,10 @@ let getWeather = () => {
                                     )}°C`;
                                     wetterPlus5Day.innerHTML =
                                         json.list[39].weather[0].description;
-                                    datumPlus5Day.innerHTML = json.list[39].dt_txt.slice(5, 10);
+                                    let datep5tag = json.list[39].dt_txt.slice(5, 10);
+                                    let datumschoen5 = datep5tag.slice(3, 5) + "." + datep5tag.slice(0, 2) + ".";
+                                    datumPlus5Day.innerHTML = datumschoen5;
+
                                     iconPlus5Day.setAttribute(
                                         `src`,
                                         `http://openweathermap.org/img/wn/${json.list[39].weather[0].icon}@2x.png`
