@@ -121,7 +121,6 @@ let getWeather = () => {
                             )
                                 .then((response) => response.json())
                                 .then((json) => {
-                                    console.log(json);
                                     gradPlus3h.innerHTML = `${json.list[0].main.temp.toFixed(
                                         0
                                     )}°C`;
@@ -165,7 +164,6 @@ let getWeather = () => {
                                         `src`,
                                         `http://openweathermap.org/img/wn/${json.list[3].weather[0].icon}@2x.png`
                                     );
-                                    console.log(json.list);
                                     border1.style.borderBottom = "0.5px dashed #0081AF";
                                     tempPlus1Day.innerHTML = `${json.list[7].main.temp.toFixed(
                                         0
