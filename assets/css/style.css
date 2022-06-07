@@ -226,19 +226,3 @@ footer {
     font-weight: 500;
     padding-bottom: 2vh;
 }
-
-/* ========================
-    MEDIA QUERIES
-=========================== */
-
-@media screen and (min-width: 768px) {
-    .startseite a img {
-        width: 50vw;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .startseite a img {
-        width: 30vw;
-    }
-}
