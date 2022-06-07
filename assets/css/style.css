@@ -1,3 +1,7 @@
+/* ========================
+    GENERAL STYLE
+=========================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* font-family: 'Roboto', sans-serif; */
@@ -29,6 +33,10 @@ body {
     margin: 2vh auto;
 }
 
+/* ========================
+    HEADER
+=========================== */
+
 #inputPlace {
     border: none;
     width: 80%;
@@ -41,6 +49,10 @@ body {
     font-size: 1.6rem;
 }
 
+/* ========================
+    MAIN
+=========================== */
+
 .home {
     padding: 1vh 1vh 0 1vh;
 }
@@ -52,6 +64,7 @@ body {
     margin: 2vh 0;
 }
 
+/* Aktuelles Wetter/ Heute/ Nächste 5 Tage  */
 h2 {
     text-align: center;
     color: #00ABE7;
@@ -60,18 +73,21 @@ h2 {
     padding: 2vh 0;
 }
 
+/* Datum InnerHTML */
 h3 {
     font-size: 2rem;
     font-weight: 300;
     color: #EABA6B;
 }
 
+/* Temperatur */
 h4 {
     font-size: 3rem;
     font-weight: 400;
     color: #EABA6B;
 }
 
+/* Aktuelles Wetter  */
 .wetterAktuell>div,
 .next5Tage>div {
     display: flex;
@@ -119,6 +135,15 @@ h4 {
     gap: 10px;
 }
 
+#iconId3h,
+#iconId6h,
+#iconId9h,
+#iconId12h {
+    display: none;
+}
+
+/* Wetter Heute */
+
 .wetterHeute h2 {
     grid-column: 1/5;
     grid-row: 1/2;
@@ -160,13 +185,7 @@ h4 {
     margin: 1vh 0;
 }
 
-#iconId3h,
-#iconId6h,
-#iconId9h,
-#iconId12h {
-    display: none;
-}
-
+/* Nächste 5 Tage */
 .next5Tage div div:nth-of-type(1) img {
     height: 80px;
     object-fit: contain;
@@ -183,6 +202,11 @@ h4 {
     font-weight: 400;
 }
 
+.next5Tage>div {
+    padding-top: 2vh;
+    border-bottom: 0.5px dashed #0081AF;
+}
+
 .border1,
 .border2,
 .border3,
@@ -192,12 +216,20 @@ h4 {
     border-bottom: none;
 }
 
+/* ========================
+    FOOTER
+=========================== */
+
 footer {
     text-align: center;
     color: #EAD2AC;
     font-weight: 500;
     padding-bottom: 2vh;
 }
+
+/* ========================
+    MEDIA QUERIES
+=========================== */
 
 @media screen and (min-width: 768px) {
     .startseite a img {
