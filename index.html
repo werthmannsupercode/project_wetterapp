@@ -1,130 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Wetterapp</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <img src="assets/img/Logobeige.png" alt="Logo" class="logo">
-        <input type="search" name="Ort" id="inputPlace" placeholder="Ortsname / PLZ" onchange="getWeather()
-        required" />
+      <img src="assets/img/Logobeige.png" alt="Logo" class="logo" />
+      <input
+        type="search"
+        name="Ort"
+        id="inputPlace"
+        placeholder="Ortsname / PLZ"
+        onchange="getWeather()
+        required"
+      />
     </header>
     <main>
-        <section class="wetterAktuell">
-            <h2>Aktuelles Wetter</h2>
-
-            <div>
-                <div>
-                    <img src="" alt="" id="iconIdact">
-                    <h3 id="location"></h3>
-                    <h4 id="temp"></h4>
-                </div>
-                <div>
-                    <p id="description"></p>
-                    <p id="feels_like"></p>
-                    <p id="humidity"></p>
-                    <p id="temp_min_max"></p>
-                    <p id="pressure"></p>
-                    <p id="wind"></p>
-                </div>
-            </div>
-
-        </section>
-        <section class="wetterHeute">
-            <h2>Heute</h2>
-            <div class="plus3h">
-                <img src="" alt="" id="iconId3h">
-                <p id="zeitPlus3h"></p>
-                <p id="gradPlus3h"></p>
-                <p id="wetterPlus3h"></p>
-            </div>
-            <div class="plus6h">
-                <img src="" alt="" id="iconId6h">
-                <p id="zeitPlus6h"></p>
-                <p id="gradPlus6h"></p>
-                <p id="wetterPlus6h"></p>
-            </div>
-            <div class="plus9h">
-                <img src="" alt="" id="iconId9h">
-                <p id="zeitPlus9h"></p>
-                <p id="gradPlus9h"></p>
-                <p id="wetterPlus9h"></p>
-            </div>
-            <div class="plus12h">
-                <img src="" alt="" id="iconId12h">
-                <p id="zeitPlus12h"></p>
-                <p id="gradPlus12h"></p>
-                <p id="wetterPlus12h"></p>
-            </div>
-        </section>
-        <section class="next5Tage">
-            <h2>Nächste 5 Tage</h2>
-            <div class="border1">
-                <div>
-                    <h3 id="datumPlus1Day"></h3>
-                    <img src="" alt="" id="iconPlus1Day">
-                </div>
-                <div>
-                    <p id="tempPlus1Day"></p>
-                    <p id="wetterPlus1Day"></p>
-
-                </div>
-            </div>
-            <div class="border2">
-                <div>
-                    <h3 id="datumPlus2Day"></h3>
-                    <img src="" alt="" id="iconPlus2Day">
-                </div>
-                <div>
-                    <p id="tempPlus2Day"></p>
-                    <p id="wetterPlus2Day"></p>
-
-                </div>
-            </div>
-            <div class="border3">
-                <div>
-                    <h3 id="datumPlus3Day"></h3>
-                    <img src="" alt="" id="iconPlus3Day">
-                </div>
-                <div>
-                    <p id="tempPlus3Day"></p>
-                    <p id="wetterPlus3Day"></p>
-
-                </div>
-            </div>
-            <div class="border4">
-                <div>
-                    <h3 id="datumPlus4Day"></h3>
-                    <img src="" alt="" id="iconPlus4Day">
-                </div>
-                <div>
-                    <p id="tempPlus4Day"></p>
-                    <p id="wetterPlus4Day"></p>
-
-                </div>
-            </div>
-            <div class="border5">
-                <div>
-                    <h3 id="datumPlus5Day"></h3>
-                    <img src="" alt="" id="iconPlus5Day">
-                </div>
-                <div>
-                    <p id="tempPlus5Day"></p>
-                    <p id="wetterPlus5Day"></p>
-
-                </div>
-            </div>
-            <!-- </a> -->
-        </section>
-        <section class="karte">
-
-        </section>
+      <section class="wetterAktuell">
+        <h2>Aktuelles Wetter</h2>
+        <div>
+          <div>
+            <img src="" alt="" id="iconIdact" />
+            <h3 id="location"></h3>
+            <h4 id="temp"></h4>
+          </div>
+          <div>
+            <p id="description"></p>
+            <p id="feels_like"></p>
+            <p id="humidity"></p>
+            <p id="temp_min_max"></p>
+            <p id="pressure"></p>
+            <p id="wind"></p>
+          </div>
+        </div>
+      </section>
+      <section class="wetterHeute">
+        <h2>Heute</h2>
+        <div class="plus3h">
+          <img src="" alt="" id="iconId3h" />
+          <p id="zeitPlus3h"></p>
+          <p id="gradPlus3h"></p>
+          <p id="wetterPlus3h"></p>
+        </div>
+        <div class="plus6h">
+          <img src="" alt="" id="iconId6h" />
+          <p id="zeitPlus6h"></p>
+          <p id="gradPlus6h"></p>
+          <p id="wetterPlus6h"></p>
+        </div>
+        <div class="plus9h">
+          <img src="" alt="" id="iconId9h" />
+          <p id="zeitPlus9h"></p>
+          <p id="gradPlus9h"></p>
+          <p id="wetterPlus9h"></p>
+        </div>
+        <div class="plus12h">
+          <img src="" alt="" id="iconId12h" />
+          <p id="zeitPlus12h"></p>
+          <p id="gradPlus12h"></p>
+          <p id="wetterPlus12h"></p>
+        </div>
+      </section>
+      <section class="next5Tage">
+        <h2>Nächste 5 Tage</h2>
+        <div class="border1">
+          <div>
+            <h3 id="datumPlus1Day"></h3>
+            <img src="" alt="" id="iconPlus1Day" />
+          </div>
+          <div>
+            <p id="tempPlus1Day"></p>
+            <p id="wetterPlus1Day"></p>
+          </div>
+        </div>
+        <div class="border2">
+          <div>
+            <h3 id="datumPlus2Day"></h3>
+            <img src="" alt="" id="iconPlus2Day" />
+          </div>
+          <div>
+            <p id="tempPlus2Day"></p>
+            <p id="wetterPlus2Day"></p>
+          </div>
+        </div>
+        <div class="border3">
+          <div>
+            <h3 id="datumPlus3Day"></h3>
+            <img src="" alt="" id="iconPlus3Day" />
+          </div>
+          <div>
+            <p id="tempPlus3Day"></p>
+            <p id="wetterPlus3Day"></p>
+          </div>
+        </div>
+        <div class="border4">
+          <div>
+            <h3 id="datumPlus4Day"></h3>
+            <img src="" alt="" id="iconPlus4Day" />
+          </div>
+          <div>
+            <p id="tempPlus4Day"></p>
+            <p id="wetterPlus4Day"></p>
+          </div>
+        </div>
+        <div class="border5">
+          <div>
+            <h3 id="datumPlus5Day"></h3>
+            <img src="" alt="" id="iconPlus5Day" />
+          </div>
+          <div>
+            <p id="tempPlus5Day"></p>
+            <p id="wetterPlus5Day"></p>
+          </div>
+        </div>
+        <!-- </a> -->
+      </section>
+      <section class="karte">
+        <iframe id="map" frameborder="0"></iframe>
+      </section>
     </main>
     <footer>Die Wetterfrösche 🐸</footer>
 
