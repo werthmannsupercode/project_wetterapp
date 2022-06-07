@@ -55,12 +55,19 @@ const tempPlus5Day = document.querySelector("#tempPlus5Day");
 const wetterPlus5Day = document.querySelector("#wetterPlus5Day");
 const iconPlus5Day = document.querySelector("#iconPlus5Day");
 
+const border1 = document.querySelector(".border1");
+const border2 = document.querySelector(".border2");
+const border3 = document.querySelector(".border3");
+const border4 = document.querySelector(".border4");
+const border5 = document.querySelector(".border5");
+
 // async function
 
 let getWeather = () => {
     let location = document.querySelector("#inputPlace").value;
     let lat;
     let lon;
+
     fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${key}&units=metric&lang=DE`
     )
@@ -120,15 +127,17 @@ let getWeather = () => {
                                     )}°C`;
                                     zeitPlus3h.innerHTML = `${json.list[0].dt_txt.slice(11, 16)}`;
                                     wetterPlus3h.innerHTML = `${json.list[0].weather[0].description}`;
+                                    iconId3h.style.display = "block";
                                     iconId3h.setAttribute(
                                         `src`,
-                                        `http://openweathermap.org/img/wn/${json.list[0].weather[0].icon}@2x.png`
+                                        `http://openweathermap.org/img/wn/${json.list[1].weather[0].icon}@2x.png`
                                     );
                                     gradPlus6h.innerHTML = `${json.list[1].main.temp.toFixed(
                                         0
                                     )}°C`;
                                     zeitPlus6h.innerHTML = `${json.list[1].dt_txt.slice(11, 16)}`;
                                     wetterPlus6h.innerHTML = `${json.list[1].weather[0].description}`;
+                                    iconId6h.style.display = "block";
                                     iconId6h.setAttribute(
                                         `src`,
                                         `http://openweathermap.org/img/wn/${json.list[1].weather[0].icon}@2x.png`
@@ -138,6 +147,7 @@ let getWeather = () => {
                                     )}°C`;
                                     zeitPlus9h.innerHTML = `${json.list[2].dt_txt.slice(11, 16)}`;
                                     wetterPlus9h.innerHTML = `${json.list[2].weather[0].description}`;
+                                    iconId9h.style.display = "block";
                                     iconId9h.setAttribute(
                                         `src`,
                                         `http://openweathermap.org/img/wn/${json.list[2].weather[0].icon}@2x.png`
@@ -150,11 +160,13 @@ let getWeather = () => {
                                         16
                                     )}`;
                                     wetterPlus12h.innerHTML = `${json.list[3].weather[0].description}`;
+                                    iconId12h.style.display = "block";
                                     iconId12h.setAttribute(
                                         `src`,
                                         `http://openweathermap.org/img/wn/${json.list[3].weather[0].icon}@2x.png`
                                     );
                                     console.log(json.list);
+                                    border1.style.borderBottom = "0.5px dashed #0081AF";
                                     tempPlus1Day.innerHTML = `${json.list[7].main.temp.toFixed(
                                         0
                                     )}°C`;
@@ -165,6 +177,7 @@ let getWeather = () => {
                                         `src`,
                                         `http://openweathermap.org/img/wn/${json.list[7].weather[0].icon}@2x.png`
                                     );
+                                    border2.style.borderBottom = "0.5px dashed #0081AF";
                                     tempPlus2Day.innerHTML = `${json.list[15].main.temp.toFixed(
                                         0
                                     )}°C`;
@@ -175,6 +188,7 @@ let getWeather = () => {
                                         `src`,
                                         `http://openweathermap.org/img/wn/${json.list[15].weather[0].icon}@2x.png`
                                     );
+                                    border3.style.borderBottom = "0.5px dashed #0081AF";
                                     tempPlus3Day.innerHTML = `${json.list[23].main.temp.toFixed(
                                         0
                                     )}°C`;
@@ -185,6 +199,7 @@ let getWeather = () => {
                                         `src`,
                                         `http://openweathermap.org/img/wn/${json.list[23].weather[0].icon}@2x.png`
                                     );
+                                    border4.style.borderBottom = "0.5px dashed #0081AF";
                                     tempPlus4Day.innerHTML = `${json.list[31].main.temp.toFixed(
                                         0
                                     )}°C`;
@@ -195,6 +210,7 @@ let getWeather = () => {
                                         `src`,
                                         `http://openweathermap.org/img/wn/${json.list[31].weather[0].icon}@2x.png`
                                     );
+                                    border5.style.borderBottom = "0.5px dashed #0081AF";
                                     tempPlus5Day.innerHTML = `${json.list[39].main.temp.toFixed(
                                         0
                                     )}°C`;

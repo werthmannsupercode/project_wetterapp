@@ -160,6 +160,13 @@ h4 {
     margin: 1vh 0;
 }
 
+#iconId3h,
+#iconId6h,
+#iconId9h,
+#iconId12h {
+    display: none;
+}
+
 .next5Tage div div:nth-of-type(1) img {
     height: 80px;
     object-fit: contain;
@@ -176,9 +183,13 @@ h4 {
     font-weight: 400;
 }
 
-.next5Tage>div {
+.border1,
+.border2,
+.border3,
+.border4,
+.border5 {
     padding-top: 2vh;
-    border-bottom: 0.5px dashed #0081AF;
+    border-bottom: none;
 }
 
 footer {
