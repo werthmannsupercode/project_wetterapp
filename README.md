@@ -4,4 +4,4 @@ Gemeinschaftsprojekt
 
 Besonderheit:
 
-Nutzung der API
+Nutzung der openweathermap API
